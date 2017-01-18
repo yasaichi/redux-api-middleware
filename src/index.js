@@ -1,7 +1,6 @@
 /**
  * Redux middleware for calling an API
  * @module redux-api-middleware
- * @requires isomorphic-fetch
  * @requires lodash.isplainobject
  * @exports {symbol} CALL_API
  * @exports {function} isRSAA
@@ -33,7 +32,7 @@ import CALL_API from './CALL_API';
 import { isRSAA, validateRSAA, isValidRSAA } from './validation';
 import { InvalidRSAA, InternalError, RequestError, ApiError } from './errors';
 import { getJSON } from './util';
-import { apiMiddleware } from './middleware';
+import { apiMiddlewareCreator } from './middleware';
 
 export {
   CALL_API,
@@ -45,5 +44,5 @@ export {
   RequestError,
   ApiError,
   getJSON,
-  apiMiddleware
+  apiMiddlewareCreator
 };
