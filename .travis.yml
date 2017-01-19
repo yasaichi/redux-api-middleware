@@ -8,3 +8,6 @@ script:
   - npm run cover
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+branches:
+  only:
+    - master
