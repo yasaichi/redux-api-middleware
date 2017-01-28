@@ -402,7 +402,7 @@ The following objects are exported by `redux-api-middleware`.
 
 A JavaScript `Symbol` whose presence as a key in an action signals that `redux-api-middleware` should process said action.
 
-#### `apiMiddlewareCreator`
+#### `apiMiddlewareCreator(fetch)`
 
 A function that returns the Redux middleware.
 
