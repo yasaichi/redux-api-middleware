@@ -1,7 +1,8 @@
 redux-api-middleware
 ====================
 
-[![Build Status](https://travis-ci.org/agraboso/redux-api-middleware.svg?branch=master)](https://travis-ci.org/agraboso/redux-api-middleware) [![Coverage Status](https://coveralls.io/repos/agraboso/redux-api-middleware/badge.svg?branch=master&service=github)](https://coveralls.io/github/agraboso/redux-api-middleware?branch=master)
+[![Build Status](https://travis-ci.org/yasaichi/redux-api-middleware.svg?branch=master)](https://travis-ci.org/yasaichi/redux-api-middleware)
+[![Coverage Status](https://coveralls.io/repos/yasaichi/redux-api-middleware/badge.svg?branch=master&service=github)](https://coveralls.io/github/yasaichi/redux-api-middleware?branch=master)
 
 [Redux middleware](http://rackt.github.io/redux/docs/advanced/Middleware.html) for calling an API.
 
@@ -35,7 +36,7 @@ RSAAs are identified by the presence of a `[CALL_API]` property, where [`CALL_AP
 The following is a minimal RSAA action:
 
 ```js
-import { CALL_API } from `redux-api-middleware`;
+import { CALL_API } from '@yasaichi/redux-api-middleware';
 
 {
   [CALL_API]: {
@@ -89,7 +90,7 @@ We have tiptoed around error-handling issues here. For a thorough walkthrough of
 `redux-api-middleware` is available on [npm](https://www.npmjs.com/package/redux-api-middleware).
 
 ```
-$ npm install redux-api-middleware --save
+$ npm install @yasaichi/redux-api-middleware --save
 ```
 
 To use it, wrap the standard Redux store with it. Here is an example setup. For more information (for example, on how to add several middlewares), consult the [Redux documentation](http://redux.js.org).
@@ -98,7 +99,7 @@ To use it, wrap the standard Redux store with it. Here is an example setup. For 
 
 ```js
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { apiMiddlewareCreator } from 'redux-api-middleware';
+import { apiMiddlewareCreator } from '@yasaichi/redux-api-middleware';
 import reducers from './reducers';
 
 const apiMiddleware = apiMiddlewareCreator(fetch);
